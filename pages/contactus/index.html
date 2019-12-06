@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>Document</title>
+    <style>
+        .top{
+            background-color: #000000;
+        }
+        .main-c{
+        height: 100%;
+        width: 1200px;
+         margin: 0 auto;
+        }
+        .main{
+            height: 823px;
+            background-color: #161616;
+        }
+
+        .main-c .connact{
+            height: 192px;
+            position: relative;
+            width: 100%;
+        }
+        .main-c .connact .line1,.line2{
+            display: block;
+            width: 129px;
+            height: 2px;
+            background-color: #dd1717;
+        }
+        .main-c .connact .line1{
+            position: absolute;
+            left: 341px;
+            top: 60px;
+        }
+        .main-c .connact .line2{
+            position: absolute;
+            right: 341px;
+            top: 60px;
+        }
+        .main-c .connact .eng{
+            position: absolute;
+            left: 538px;
+            top: 49px;
+            font-size: 24px;
+            color: #dd1717;
+        }
+        .main-c .connact .chs{
+            position: absolute;
+            left: 568px;
+            top: 84px;
+            font-size: 16px;
+            color: #8c8c8c;
+        }
+        .main-c .inf{
+            float: left;
+            overflow: hidden;
+            width: 565px;
+        }
+        .main-c .inf .logo{
+            float: left;
+            width: 44px;
+            height: 44px;
+            margin-left: 102px;
+            background: url(img/logo2.png) no-repeat center;
+        }
+        .main-c .inf .jingjie{
+            float: left;
+            width: 67px;
+            height: 37px;
+            margin-left: 8px;
+            margin-top: 4px;
+            background: url(img/镜界2.png) no-repeat center;
+        }
+        .main-c .inf .text{
+            margin-left: 102px;
+            margin-top: 72px;
+            width: 284px;
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 30px;
+        }
+        .main-c .inf .text .red{
+            color: red;
+        }
+        .main-c .form{
+            float: left;
+            width: 535px;
+        }
+        .main-c .form p{
+            float: left;
+            position: relative;
+            display: block;
+            font-size: 14px;
+            color: #ffffff;
+            margin-left: 1px;
+        }
+        .main-c .form .name{
+            margin-top: 5px;
+        }
+        .main-c .form p .xing{
+            position: absolute;
+            right: -10px;
+            top: -4px;
+            color: #dd1717;
+        }
+        .main-c .form input{
+            float: left;
+            width: 535px;
+            height: 46px;
+            outline: none;
+            background-color: #000000;
+            color: #ffffff;
+            border: 1px solid #363636;
+            margin-top: 10px;
+            margin-bottom: 19px;
+            font-size: 20px;
+        }
+        .main-c .form textarea{
+            width: 535px;
+            height: 178px;
+            font-size: 20px;
+            line-height: 20px;
+            background-color: #000000;
+            color: #ffffff;
+            border: 1px solid #363636;
+            margin-top: 10px;
+            resize:none;
+            outline: none;
+        }
+        .main-c .form .submit{
+            width: 148px;
+            height: 48px;
+            font-size: 16px;
+            border: 0;
+            margin-left: 193px;
+            margin-top: 50px;
+            background-image: url(img/submit-bg.png);
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top-c">
+            <span class="logo"></span>
+            <span class="text"></span>
+            <ul class="nav">
+                <li class="nav-item ">
+                    <span class="one"></span>
+                    <a href="../../index.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <span></span>
+                    <a href="../show/index.html">样片大赛</a>
+                </li>
+                <li class="nav-item">
+                    <span></span>
+                    <a href="../favourable/index.html">当季优惠</a>
+                </li>
+                <li class="nav-item">
+                    <span></span>
+                    <a href="../city/index.html">旅拍城市</a>
+                </li>
+                <li class="nav-item">
+                    <span></span>
+                    <a href="../aboutus/index.html">关于我们</a>
+                </li>
+                <li class="nav-item mr0">
+                    <span class="active"></span>
+                    <a href="" class="active">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-c">
+            <div class="connact">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="chs">联系我们</span>
+                <span class="eng">Contact Us</span>
+            </div>
+            <div class="inf">
+                <span class="logo"></span>
+                <span class="jingjie"></span>
+                <div class="text">
+                    <span class="red">郑州镜界摄影服务工作室</span><span>是一家以一对一拍摄为特色的集个性写真及旅行摄影为一体的专业机构。开业以来以精湛的摄影技术,百变的化妆造型和体贴周到的服务带给顾客全新的视觉感受的同时也为自己赢得了很好的口碑。</span>
+                </div>
+            </div>
+            <form action="" method="GET" class="form">
+                <p class="name">
+                    <span class="xing">*</span>
+                    姓名</p>
+                <input type="text">
+                <p >
+                    <span class="xing">*</span>
+                    邮箱</p>
+                <input type="text">
+                <p >
+                    <span class="xing">*</span>
+                    联系方式</p>
+                <input type="text">
+                <p >
+                    <span class="xing">*</span>
+                    地点及预算</p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <input type="submit" name="" value="提交" class="submit">
+            </form>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="bottom">
+        <div class="bottom-c">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <div class="work">
+                <p>郑州镜界摄影服务工作室</p>
+                <a href="" class="wb"></a>
+                <a href="" class="qq"></a>
+                <a href="" class="wx"></a>
+                <a href="" class="bd"></a>
+            </div>
+            <div class="text">
+                <p>地址：郑州市郑东新区绿地中心6号楼</p>
+                <p>服务热线：037-7981788</p>
+                <p>邮编：456333</p>
+            </div>
+            <div class="text tel">
+                <p>手机：18236988754</p>
+                <p>邮箱：912754544@qq.com</p>
+                <p>Q Q：912754544</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-c">
+            <p>Copyright ©2010 ls1001.com, All rights reserved. 镜界传媒艺术有限公司 豫ICP备11028596号</p>
+        </div>
+    </div>
+</body>
+</html>

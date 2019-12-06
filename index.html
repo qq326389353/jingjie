@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<style>
+    .banner{
+        position: relative;
+        width: 100%;
+        height: 803px;
+        background: url(img/banner.png) no-repeat center;
+        background-size: cover;
+    }
+    .banner .jiantouleft{
+        position: absolute;
+        top: 429px;
+        left: 5.5%;
+        width: 21px;
+        height: 22px;
+        background: url(img/jiantouleft.png) no-repeat center;
+    }
+    .banner .jiantouright{
+        position: absolute;
+        top: 429px;
+        right: 5.5%;
+        width: 21px;
+        height: 22px;
+        background: url(img/jiantouright.png) no-repeat center;
+    }
+    .banner .button{
+        position: absolute;
+        bottom: 29px;
+        left: 50%;
+        transform: translate( -50%,0);
+        width: 36px;
+        height: 11px;
+    }
+    .banner .button .left{
+        float: left;
+        width: 7px;
+        height: 7px;
+        border: 2px solid #dc1818;
+        border-radius: 50%;
+    }
+    .banner .button .right{
+        float: right;
+        width: 7px;
+        height: 7px;
+        border: 2px solid #b4b1b6;
+        border-radius: 50%;
+    }
+    .banner .button .right:hover{
+        border: 2px solid #dc1818;
+    }
+    .banner .button .right:hover+.left{
+        border: 2px solid #b4b1b6;
+    }
+    .main{
+        height: 3122px;
+        background-color: #000000;
+    }
+    /* 作品展示标题 */
+    .title{
+        position: relative;
+        width: 517px;
+        height: 165px;
+        margin: 0 auto;
+        margin-bottom: 34px;
+    }
+    .title .line-left{
+        position: absolute;
+        top: 123px;
+        left: 0;
+        width: 130px;
+        height: 2px;
+        background-color: #850e0e;
+    }
+    .title .line-right{
+        position: absolute;
+        top: 123px;
+        right: 0;
+        width: 130px;
+        height: 2px;
+        background-color: #850e0e;
+    }
+    .title .eng{
+        position: absolute;
+        top: 114px;
+        left: 146px;
+        font-size: 24px;
+        color: #dd1717;
+    }
+    .title .chs{
+        position: absolute;
+        bottom: 0;
+        left: 227px;
+        font-size: 16px;
+        color: #8c8c8c;
+    }
+    /* 作品展示 */
+    .main .show{
+        margin: 0 auto;
+        width: 1519px;
+        height: 508px;
+        margin-bottom: 46px;
+    }
+    .main .show .show-item{
+        position: relative;
+        float: left;
+        width: 352px;
+        height: 246px;
+        margin-right: 37px;
+        margin-bottom: 16px;
+        background-size: cover;
+    }
+    .main .show .show-item.mr-r0{
+        margin-right: 0;
+    }
+    .main .show .show-item.mr0{
+        margin-bottom: 0;
+    }
+    .main .show .show-item:hover .box2{
+        display: block;
+    }
+    .main .show .show-item:hover .box{
+        display: block;
+    }
+    .main .show .show-item .box{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 308px;
+        height: 202px;
+        border: 1px solid #dd1717;
+        margin: 21px;
+        z-index: 99;
+    }
+    .main .show .show-item .box2{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 352px;
+        height: 246px;
+        background-color: #000000;
+        z-index: 50;
+        opacity: 0.63;
+    }
+    .main .show .show-item .box .eng{
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        color: #dd1717;
+        margin-top: 75px;
+    }
+    .main .show .show-item .box .time{
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        color: #fffefe;
+        margin-top: 25px;
+    }
+    /* 观看更多 */
+    .viewmore{
+        height: 100px;
+        text-indent: 18px;
+        text-align: center;
+        line-height: 100px;
+        background-color: #dd1717;
+    }
+    .viewmore a{
+        color: #ffffff;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    /* 优惠福利标题 */
+    .title2{
+        position: relative;
+        width: 517px;
+        height: 165px;
+        margin: 0 auto;
+    }
+    .title2 .line-left{
+        position: absolute;
+        top: 123px;
+        left: 0;
+        width: 130px;
+        height: 2px;
+        background-color: #850e0e;
+    }
+    .title2 .line-right{
+        position: absolute;
+        top: 123px;
+        right: 0;
+        width: 130px;
+        height: 2px;
+        background-color: #850e0e;
+    }
+    .title2 .eng{
+        position: absolute;
+        top: 114px;
+        left: 215px;
+        font-size: 24px;
+        color: #dd1717;
+    }
+    .title2 .chs{
+        position: absolute;
+        bottom: 0;
+        left: 227px;
+        font-size: 16px;
+        color: #8c8c8c;
+    }
+    /* .优惠福利界面 */
+    .fuli{
+        position: relative;
+        width: 1200px;
+        height: 956px;
+        margin: 0 auto;
+    }
+    .main .fuli a{
+        position: absolute;
+        width: 516px;
+        height: 302px;
+        border: 1px solid transparent;
+        background-size: cover;
+        background-clip: content-box;
+    }
+    .fuli .a1{
+        left: 0;
+        top: 82px;
+        background: url(img/show11.png) no-repeat center;
+    }
+    .fuli .a2{
+        left: 0;
+        top: 481px;
+        background: url(img/show12.png) no-repeat center;
+    }
+    .fuli .a3{
+        right: 0;
+        top: 263px;
+        background: url(img/show13.png) no-repeat center;
+    }
+    .fuli .a4{
+        right: 0;
+        top: 653px;
+        background: url(img/show14.png) no-repeat center;
+    }
+    .fuli a .text{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #212121;
+        font-size: 18px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 50px;
+    }
+    .fuli a .price{
+        position: absolute;
+        left: 19px;
+        bottom: 19px;
+        color: #ffffff;
+        font-size: 14px;
+    }
+    .fuli a:hover .button{
+        border: 2px solid #dd1717;
+    }
+    .fuli a:hover .text{
+        background-color: #dd1717;
+    }
+    .fuli a:hover{
+        border: 1px solid #dd1717;
+    }
+    .fuli .line{
+        position: absolute;
+        left: 600px;
+        top: 41px;
+        width: 1px;
+        height: 808px;
+        background-color: #1a1a1a;
+    }
+    .fuli a .button1{
+        position: absolute;
+        left: 593px;
+        top: 142px;
+        width: 9px;
+        height: 9px;
+        border: 2px solid #1a1a1a;
+        background-color: #000000;
+        border-radius: 50%;
+        z-index: 99;
+    }
+    .fuli a .button2{
+        position: absolute;
+        left: 593px;
+        top: 132px;
+        width: 9px;
+        height: 9px;
+        border: 2px solid #1a1a1a;
+        background-color: #000000;
+        border-radius: 50%;
+        z-index: 99;
+    }
+    .fuli a .button3{
+        position: absolute;
+        right: 592px;
+        top: 142px;
+        width: 9px;
+        height: 9px;
+        border: 2px solid #1a1a1a;
+        background-color: #000000;
+        border-radius: 50%;
+        z-index: 99;
+    }
+    .fuli a .button4{
+        position: absolute;
+        right: 592px;
+        top: 140px;
+        width: 9px;
+        height: 9px;
+        border: 2px solid #1a1a1a;
+        background-color: #000000;
+        border-radius: 50%;
+        z-index: 99;
+    }
+    /* 关于我们 */
+    .main .aboutus{
+        position: relative;
+        height: 541px;
+        background: url(img/aboutus.png) no-repeat center;
+        margin-top: 95px;
+
+    }
+    .main .aboutus .aboutus2{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 541px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .main .aboutus:hover .aboutus2{
+        display: block;
+    }
+    /* 关于我们标题 */
+    .title3{
+        position: relative;
+        width: 517px;
+        height: 126px;
+        margin: 0 auto;
+    }
+    .title3 .line-left{
+        position: absolute;
+        top: 84px;
+        left: 0;
+        width: 130px;
+        height: 2px;
+        background-color: #850e0e;
+    }
+    .title3 .line-right{
+        position: absolute;
+        top: 84px;
+        right: 0;
+        width: 130px;
+        height: 2px;
+        background-color: #850e0e;
+    }
+    .title3 .eng{
+        position: absolute;
+        top: 74px;
+        left: 206px;
+        font-size: 24px;
+        color: #dd1717;
+    }
+    .title3 .chs{
+        position: absolute;
+        bottom: 0;
+        left: 227px;
+        font-size: 16px;
+        color: #8c8c8c;
+    }
+    .logo1{
+        position: relative;
+        width: 100%;
+        height: 98px;   
+    }
+    .logo1 span{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%,0);
+        width: 52px;
+        height: 52px;
+        background: url(img/logo1.png) no-repeat center;
+    }
+    /* 四个logo */
+    .aboutus .box{
+        position: relative;
+        height: 125px;
+        width: 1200px;
+        margin: 0 auto;
+        margin-top: 32px;
+    }
+    .aboutus .box-icon{
+        float: left;
+        position: relative;
+        height: 125px;
+        width: 210px;
+        margin-right: 120px;
+    }
+    .aboutus .box-icon.mr0{
+        margin-right: 0;
+    }
+    .aboutus .box .logo{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 32px;
+        height: 32px;
+    }
+    .aboutus .box .logo2{
+        background: url(img/logo2.png) no-repeat top center;
+    }
+    .aboutus .box .logo3{
+        background: url(img/logo3.png) no-repeat top center;
+    }
+    .aboutus .box .logo4{
+        background: url(img/logo4.png) no-repeat top center;
+    }
+    .aboutus .box .logo5{
+        background: url(img/logo5.png) no-repeat top center;
+    }
+    .aboutus .box .text{
+        position: absolute;
+        left: 0;
+        top: 58px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+    }
+    /* 约拍流程 */
+    .yp{
+        width: 1200px;
+        height: 448px;
+        margin-bottom: 64px;
+        margin: 0 auto;
+    }
+    /* 约拍流程标题 */
+    .title4{
+        position: relative;
+        width: 517px;
+        height: 126px;
+        margin: 0 auto;
+    }
+    .title4 .line-left{
+        position: absolute;
+        top: 88px;
+        left: 0;
+        width: 130px;
+        height: 2px;
+        background-color: #850e0e;
+    }
+    .title4 .line-right{
+        position: absolute;
+        top: 88px;
+        right: 0;
+        width: 130px;
+        height: 2px;
+        background-color: #850e0e;
+    }
+    .title4 .eng{
+        position: absolute;
+        top: 76px;
+        left: 145px;
+        font-size: 24px;
+        color: #dd1717;
+    }
+    .title4 .chs{
+        position: absolute;
+        bottom: 0;
+        left: 227px;
+        font-size: 16px;
+        color: #8c8c8c;
+    }
+    /* 约拍流程内容 */
+    .yp .box{
+        width: 949px;
+        height: 128px;
+        margin: 0 auto;
+        margin-top: 194px;
+    }
+    .yp .box .box-item{
+        position: relative;
+        float: left;
+        width: 170px;
+        height: 126px;
+        border: 1px solid #161616;
+        margin-right: 22px;
+    }
+    .yp .box .box-item.mr0{
+        margin-right: 0;
+    }
+    .yp .box-item .arrow1{
+        display: none;
+        position: absolute;
+        top: -23px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin-left: -8px;
+        border: 8px solid ;
+        border-color: transparent transparent #dd1717 transparent ;
+        border-bottom-width: 14px;
+    }
+    .yp .box-item .arrow{
+        display: none;
+        position: absolute;
+        top: -22px;
+        left: 50%;
+        width: 0;3
+        height: 0;
+        margin-left: -8px;
+        border: 8px solid ;
+        border-color: transparent transparent #000000 transparent ;
+        border-bottom-width: 14px;
+        z-index: 99;
+    }
+    .yp .box-item .p1{
+        font-size: 16px;
+        color:#ffffff;
+        text-align: center;
+        margin-top: 28px;
+    }
+    .yp .box-item .p2{
+        font-size: 12px;
+        color:#8c8c8c;
+        text-align: center;
+        margin-top: 11px;
+    }
+    .yp .box-item .p3{
+        font-size: 12px;
+        color:#8c8c8c;
+        text-align: center;
+        margin-top: 12px;
+    }
+    .yp .box-item .p4{
+        position: absolute;
+        top: -87px;
+        left: 50%;
+        transform: translate(-50%,0);
+        font-size: 16px;
+        color:#dd1717;
+        font-weight: bolder;
+        z-index: 99;
+    }
+    .yp .box-item .bottom{
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 170px;
+        height: 18px;
+        background-color: #dd1717;
+    }
+    .yp .box-item .round1{
+        display: none;
+        position: absolute;
+        width: 13px;
+        height: 12px;
+        top: -39px;
+        left: 50%;
+        transform: translate(-50%,0);
+        background: url(img/round1.png) no-repeat center;
+    }
+    .yp .box-item .round2{
+        display: none;
+        position: absolute;
+        width: 55px;
+        height: 59px;
+        top: -102px;
+        left: 50%;
+        transform: translate(-50%,0);
+        background: url(img/round2.png) no-repeat center;
+    }
+    .yp .box-item:hover p{
+        color: #ffffff;
+    }
+    .yp .box-item:hover{
+        background-color: #191919;
+        border: 1px solid #dd1717;
+    }
+    .yp .box-item:hover .arrow{
+        display: block;
+    }
+    .yp .box-item:hover .arrow1{
+        display: block;
+    }
+    .yp .box-item:hover .bottom{
+        display: block;
+    }
+    .yp .box-item:hover .round1{
+        display: block;
+    }
+    .yp .box-item:hover .round2{
+        display: block;
+    }
+</style>
+<body>
+    <div class="banner">
+    <div class="top">
+            <span class="logo"></span>
+            <span class="text"></span>
+            <ul class="nav">
+                <li class="nav-item ">
+                    <span class="one active"></span>
+                    <a href="" class="active">首页</a>
+                </li>
+                <li class="nav-item">
+                    <span></span>
+                    <a href="pages/show/index.html">样片大赛</a>
+                </li>
+                <li class="nav-item">
+                    <span></span>
+                    <a href="pages/favourable/index.html">当季优惠</a>
+                </li>
+                <li class="nav-item">
+                    <span></span>
+                    <a href="pages/city/index.html">旅拍城市</a>
+                </li>
+                <li class="nav-item">
+                    <span></span>
+                    <a href="pages/aboutus/index.html">关于我们</a>
+                </li>
+                <li class="nav-item mr0">
+                    <span ></span>
+                    <a href="pages/contactus/index.html" >联系我们</a>
+                </li>
+            </ul>
+            <a href="" class="jiantouleft"></a>
+            <a href="" class="jiantouright"></a>
+            <ul class="button">
+                <li class="button-item right"></li>
+                <li class="button-item left"></li>
+            </ul>
+    </div>
+    </div>
+    <div class="main">
+        <!-- 作品展示标题 -->
+        <div class="title">
+            <div class="line-left"></div>
+            <div class="line-right"></div>
+            <div class="eng">Exhibittion of works</div>
+            <div class="chs">作品展示</div>
+        </div>
+        <!-- 作品展示部分 -->
+        <ul class="show">
+            <li class="show-item" style="background: url(img/show1.png) no-repeat center; background-size: cover;" >
+                <div class="box">
+                    <span class="eng">Xiao Ru & Grady</span>
+                    <span class="time">2018.6.25</span>
+                </div>
+                <div class="box2"></div>
+            </li>
+            <li class="show-item"style="background: url(img/show2.png) no-repeat center;background-size: cover;">
+                <div class="box">
+                        <span class="eng">Xiao Ru & Grady</span>
+                        <span class="time">2018.6.25</span>
+                    </div>
+                    <div class="box2"></div>
+            </li>
+            <li class="show-item"style="background: url(img/show3.png) no-repeat center;background-size: cover;">
+                <div class="box">
+                        <span class="eng">Xiao Ru & Grady</span>
+                        <span class="time">2018.6.25</span>
+                    </div>
+                    <div class="box2"></div>
+            </li>
+            <li class="show-item mr-r0 " style="background: url(img/show4.png) no-repeat center;background-size: cover;">
+                <div class="box">
+                        <span class="eng">Xiao Ru & Grady</span>
+                        <span class="time">2018.6.25</span>
+                    </div>
+                    <div class="box2"></div>
+            </li>
+            <li class="show-item mr0" style="background: url(img/show5.png) no-repeat center;background-size: cover;">
+                <div class="box">
+                        <span class="eng">Xiao Ru & Grady</span>
+                        <span class="time">2018.6.25</span>
+                    </div>
+                    <div class="box2"></div>
+            </li>
+            <li class="show-item mr0" style="background: url(img/show6.png) no-repeat center;background-size: cover;">
+                <div class="box">
+                        <span class="eng">Xiao Ru & Grady</span>
+                        <span class="time">2018.6.25</span>
+                    </div>
+                    <div class="box2"></div>
+            </li>
+            <li class="show-item mr0" style="background: url(img/show7.png) no-repeat center;background-size: cover;">
+                <div class="box">
+                        <span class="eng">Xiao Ru & Grady</span>
+                        <span class="time">2018.6.25</span>
+                    </div>
+                    <div class="box2"></div>
+            </li>
+            <li class="show-item mr-r0 mr0" style="background: url(img/show8.png) no-repeat center;background-size: cover;">
+                <div class="box">
+                        <span class="eng">Xiao Ru & Grady</span>
+                        <span class="time">2018.6.25</span>
+                    </div>
+                    <div class="box2"></div>
+            </li>
+        </ul>
+        <!-- 观看更多 -->
+        <div class="viewmore">
+            <a href="">VIEW  MORE</a>
+        </div>
+        <!-- 优惠福利标题 -->
+        <div class="title2">
+                <div class="line-left"></div>
+                <div class="line-right"></div>
+                <div class="eng">Welfare</div>
+                <div class="chs">优惠福利</div>
+        </div>
+        <!-- 优惠福利界面 -->
+        <div class="fuli">
+                <!-- 图1 -->
+                <a href="" class="a1" >
+                    <span class="text">7288元/套</span>
+                    <span class="price">国庆特惠</span>
+                    <span class="button button1 "></span>
+                </a>
+                <!-- 图2 -->
+                <a href="" class="a2" >
+                    <span class="text">5520元/套</span>
+                    <span class="price">闺蜜套餐</span>
+                    <span class="button button2"></span>
+                </a>
+                <!-- 图3 -->
+                <a href="" class="a3" >
+                    <span class="text">6250元/套</span>
+                    <span class="price">情侣特惠</span>
+                    <span class="button button3"></span>
+                </a>
+                <!-- 图4 -->
+                <a href="" class="a4">
+                    <span class="text">3230元/套</span>
+                    <span class="price">个人福利</span>
+                    <span class="button button4"></span>
+                </a>
+                <span class="line"></span>
+        </div>
+               <!-- 关于我们 -->
+        <div class="aboutus">
+            <div class="aboutus2"></div>
+                <!-- 关于我们标题 -->
+                <div class="title3">
+                        <div class="line-left"></div>
+                        <div class="line-right"></div>
+                        <div class="eng">About Us</div>
+                        <div class="chs">关于我们</div>
+                </div>
+                <!-- logo1 -->
+                <div class="logo1">
+                    <span></span>
+                </div>
+                <!-- 四个logo -->
+                <div class="box">
+                    <div class="box-icon">
+                        <span class="logo logo2"></span>
+                        <span class="text">2014 年 成 立 于 郑 州，是 郑 州 知 名 一 线 品 牌 旅 拍 摄 影 工 作。</span>
+                    </div>
+                    <div class="box-icon">
+                        <span class="logo logo3"></span>
+                        <span class="text">作 品 多 次 被 今 日 人 像和 人 像 摄 影  等 知 名 行 内 杂 志 推 荐</span>
+                    </div>
+                    <div class="box-icon">
+                        <span class="logo logo4"></span>
+                        <span class="text">我 们 的 拍 摄 方 式 更 像 是 一 天 旅 行，风 景 与 光 影，只是 为 了 见证 情 感</span>
+                    </div>
+                    <div class="box-icon mr0">
+                        <span class="logo logo5"></span>
+                        <span class="text">时 尚 会 消 逝，影 像 会 长 存，我 们 让 每 一 张 照 片 充 满 幸 福 的 温 度。</span>
+                    </div>
+                </div>
+        </div>
+        <!-- 约拍流程 -->
+        <div class="yp">
+            <!-- 标题 -->
+            <div class="title4">
+                <div class="line-left"></div>
+                <div class="line-right"></div>
+                <div class="eng">Medical  equipment</div>
+                <div class="chs">约拍流程</div>
+             </div>
+             <!-- 约拍流程内容 -->
+             <div class="box">
+                 <div class="box-item">
+                     <div class="arrow"></div>
+                     <div class="arrow1"></div>
+                     <p class="p1">前期沟通</p>
+                     <p class="p2">确定时间地点及相关事项</p>
+                     <p class="p4">1</p>
+                     <div class="bottom"></div>
+                     <div class="round1"></div>
+                     <div class="round2"></div>
+                 </div>
+                 <div class="box-item">
+                        <div class="arrow"></div>
+                        <div class="arrow1"></div>
+                        <p class="p1">签约拍摄</p>
+                        <p class="p2">签订拍摄协议，预付</p>
+                        <p class="p3">30%款项</p>
+                        <p class="p4">2</p>
+                        <div class="bottom"></div>
+                        <div class="round1"></div>
+                        <div class="round2"></div>
+                </div>
+                <div class="box-item">
+                        <div class="arrow"></div>
+                        <div class="arrow1"></div>
+                        <p class="p1">拍摄</p>
+                        <p class="p2">指派摄影师拍摄，拍摄</p>
+                        <p class="p3">完毕后支付4%款项</p>
+                        <p class="p4">3</p>
+                        <div class="bottom"></div>
+                        <div class="round1"></div>
+                        <div class="round2"></div>
+                </div>
+                <div class="box-item">
+                        <div class="arrow"></div>
+                        <div class="arrow1"></div>
+                        <p class="p1">选片</p>
+                        <p class="p2">客户挑选拍摄的原片，</p>
+                        <p class="p3">支付剩余30%款项</p>
+                        <p class="p4">4</p>
+                        <div class="bottom"></div>
+                        <div class="round1"></div>
+                        <div class="round2"></div>
+                </div>
+                <div class="box-item mr0">
+                        <div class="arrow"></div>
+                        <div class="arrow1"></div>
+                        <p class="p1">精修返图</p>
+                        <p class="p2">后期精修挑选的原片，</p>
+                        <p class="p3">交付图片</p>
+                        <p class="p4">5</p>
+                        <div class="bottom"></div>
+                        <div class="round1"></div>
+                        <div class="round2"></div>
+                </div>
+                    
+             </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="bottom">
+            <div class="bottom-c">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <div class="work">
+                    <p>郑州镜界摄影服务工作室</p>
+                    <a href="" class="wb"></a>
+                    <a href="" class="qq"></a>
+                    <a href="" class="wx"></a>
+                    <a href="" class="bd"></a>
+                </div>
+                <div class="text">
+                    <p>地址：郑州市郑东新区绿地中心6号楼</p>
+                    <p>服务热线：037-7981788</p>
+                    <p>邮编：456333</p>
+                </div>
+                <div class="text tel">
+                    <p>手机：18236988754</p>
+                    <p>邮箱：912754544@qq.com</p>
+                    <p>Q Q：912754544</p>
+                </div>
+            </div>
+    </div>
+    <div class="footer">
+            <div class="footer-c">
+                <p>Copyright ©2010 ls1001.com, All rights reserved. 镜界传媒艺术有限公司 豫ICP备11028596号</p>
+            </div>
+    </div>
+</body>
+</html>

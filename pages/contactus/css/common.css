@@ -1,0 +1,160 @@
+﻿*{  
+    margin: 0;
+    padding: 0;
+}
+.top{
+    height: 75px;
+    /* background-color: #000000; */
+}
+
+.bottom{
+    height: 350px;
+    background-color: #000000;
+}
+.footer{
+    height: 76px;
+    background-color: #161616;
+}
+.top-c,.bottom-c,.footer-c{
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+}
+.top-c .logo{
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: url(img/logo.png) no-repeat center;
+    margin-top: 14px;
+}
+.top-c .text{
+    float: left;
+    width: 67px;
+    height: 37px;
+    background: url(img/镜界.png) no-repeat center;
+    margin: 18px 0 0 8px;
+}
+.top-c .nav{
+    float: right;
+    font-size: 16px;
+    color: #ffffff;
+}
+.top-c .nav .nav-item {
+    position: relative;
+    float: left;
+    margin-right: 36px;
+    margin-top: 27px;
+}
+.top-c .nav .nav-item.mr0{
+    margin-right: 0;
+}
+.top-c .nav .nav-item span{
+    display: none;
+    position: absolute;
+    top: 30px;
+    width: 4em;
+    height: 2px;
+    background-color: #dd1717;
+}
+.top-c .nav .nav-item .one{
+    width: 41px;
+    left: -4px;
+}
+.top-c .nav .nav-item a{
+    color: rgba(255, 255, 255, 0.4);
+}
+.top-c .nav .nav-item:hover a{
+    color: #dd1717;
+}
+.top-c .nav .nav-item:hover span{
+    display: block;
+}
+.top-c .nav .nav-item .active{
+    display: block;
+    color: #dd1717;
+}
+/* 底部样式 */
+.bottom-c{
+    position: relative;
+}
+.bottom-c .work{
+    float: left;
+    overflow: hidden;
+    width: 480px;
+    font-size: 16px;
+    color: #8c8c8c;
+}
+.bottom-c .work p{
+    /* display: block; */
+    margin-top: 147px;
+}
+.bottom-c .work .wb{
+    width: 29px;
+    height: 23px;
+    float: left;
+    margin-top: 18px;
+    margin-left: 2px;
+    margin-right: 21px;
+    background-image: url(img/wb.png);
+}
+.bottom-c .work .qq{
+    width: 22px;
+    height: 24px;
+    float: left;
+    margin-top: 17px;
+    margin-right: 22px;
+    background-image: url(img/qq.png);
+}
+.bottom-c .work .wx{
+    width: 27px;
+    height: 23px;
+    float: left;
+    margin-top: 18px;
+    margin-right: 22px;
+    background-image: url(img/wx.png);
+}
+.bottom-c .work .bd{
+    width: 22px;
+    height: 24px;
+    float: left;
+    margin-top: 17px;
+    background-image: url(img/bd.png);
+}
+.bottom-c .text{
+    float: left;
+    width: 539px; 
+    font-size: 14px;
+    color: #8c8c8c;
+    margin-top: 132px;
+}
+.bottom-c .text p{
+    margin-bottom: 22px;
+}
+.bottom-c .text.tel{
+    width: 181px;
+}
+.bottom-c .line1{
+    position: absolute;
+    left: 368px;
+    top: 120px;
+    width: 2px;
+    height: 111px;
+    background-color: #0e0e0e;
+}
+.bottom-c .line2{
+    position: absolute;
+    left: 825px;
+    top: 120px;
+    width: 2px;
+    height: 111px;
+    background-color: #0e0e0e;
+}
+.footer-c{
+    overflow: hidden;
+}
+.footer-c p{
+    text-align: center;
+    color: #8c8c8c;
+    margin-top: 31px;
+    font-size: 12px;
+}

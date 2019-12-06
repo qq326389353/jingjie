@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<style>
+    .main{
+        position: relative;
+        width: 100%;
+        height: 1164px;
+        background: url(img/banner.png) no-repeat center;
+        background-size: cover;
+        background-color: #000000;
+    }
+    .main .heimeng{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 1164px;
+        background-color:  rgba(0, 0, 0, 0.45);;
+    }
+    .main:hover .heimeng{
+        display: block;
+    }
+    .main-c{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    /* aboutus标题 */
+    .title{
+        position: relative;
+        width: 517px;
+        height: 174px;
+        margin: 0 auto;
+    }
+    .title .line-left{
+        position: absolute;
+        top: 141px;
+        left: 0;
+        width: 130px;
+        height: 2px;
+        background-color: #850e0e;
+    }
+    .title .line-right{
+        position: absolute;
+        top: 141px;
+        right: 0;
+        width: 130px;
+        height: 2px;
+        background-color: #850e0e;
+    }
+    .title .eng{
+        position: absolute;
+        top: 130px;
+        left: 214px;
+        font-size: 24px;
+        color: #dd1717;
+    }
+    .title .chs{
+        position: absolute;
+        bottom: 0;
+        left: 242px;
+        font-size: 12px;
+        color: #8c8c8c;
+    }
+    .aboutus-text{
+        width: 781px;
+        height: 180px;
+        margin: 0 auto;
+    }
+    .aboutus-text p{
+        position: relative;
+        z-index: 10;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 70px;
+        line-height: 30px;
+    }
+    /* 历史部分 */
+    .history{
+        position: relative;
+        width: 790px;
+        height: 90px;
+        margin: 0 auto;
+    }
+    .history .year1{
+        position: absolute;
+        top: 0;
+        left: 9px;
+        font-size: 60px;
+        font-weight: bolder;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .history .time1{
+        position: absolute;
+        left: 270px;
+        top: 8px;
+        font-size: 60px;
+        font-weight: bolder;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .history .time1 span{
+        position: absolute;
+        right:-45px;
+        top: 8px;
+        font-size: 16px;
+        font-weight: bolder;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .history .picture1{
+        position: absolute;
+        left: 614px;
+        top: 8px;
+        font-size: 60px;
+        font-weight: bolder;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .history .picture1 span{
+        position: absolute;
+        right:-32px;
+        top: 4px;
+        font-size: 16px;
+        font-weight: bolder;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .history .year2{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: rgba(255, 254, 254, 0.4);
+    }
+    .history .time2{
+        position: absolute;
+        bottom: 0;
+        left: 311px;
+        color: rgba(255, 254, 254, 0.4);
+    }
+    .history .picture2{
+        position: absolute;
+        bottom: 0;
+        left: 645px;
+        color: rgba(255, 254, 254, 0.4);
+    }
+    .history .line1{
+        position: absolute;
+        top: 8px;
+        left: 208px;
+        width: 1px;
+        height: 73px;
+        background-color: #4e4f4f;
+    }
+    .history .line2{
+        position: absolute;
+        top: 8px;
+        left: 580px;
+        width: 1px;
+        height: 73px;
+        background-color: #4e4f4f;
+    }
+    .introduce{
+        position: relative;
+        width: 780px;
+        height: 360px;
+        border: 3px solid #dd1717;
+        margin: 0 auto;
+        margin-top: 130px;
+    }
+    .introduce .logo{
+        position: absolute;
+        top: -31px;
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 245px;
+        height: 54px;
+        background-color: #000000;
+    }
+    .introduce .logo .logo1{
+        position: absolute;
+        left: 40px;
+        bottom: 0;
+        width: 53px;
+        height: 52px;
+        background: url(img/logo1.png) no-repeat center;
+    }
+    .introduce .logo .logo2{
+        position: absolute;
+        left: 111px;
+        bottom: 0;
+        width: 95px;
+        height: 52px;
+        background: url(img/logo2.png) no-repeat center;
+    }
+    .introduce .text1{
+        float: left;
+        width: 30px;
+        height: 194px;
+        font-size: 30px;
+        font-family: "叶根友毛笔行书2.0版";line-height: 48px;
+        margin: 83px 47px 83px 38px ;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .introduce .text2{
+        float: left;
+        width: 612px;
+        margin-top: 60px;
+    }
+    .introduce .text2 p{
+        font-size: 14px;
+        line-height: 30px;
+        text-indent: 2em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="heimeng"></div>
+        <div class="main-c">
+            <!-- 顶部 -->
+            <div class="top">
+                <div class="top-c">
+                    <span class="logo"></span>
+                    <span class="text"></span>
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <span class="one"></span>
+                            <a href="../../index.html">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <span></span>
+                            <a href="../show/index.html">样片大赛</a>
+                        </li>
+                        <li class="nav-item">
+                            <span></span>
+                            <a href="../favourable/index.html">当季优惠</a>
+                        </li>
+                        <li class="nav-item">
+                            <span></span>
+                            <a href="../city/index.html">旅拍城市</a>
+                        </li>
+                        <li class="nav-item ">
+                            <span class="active" ></span>
+                            <a href="../aboutus/index.html" class="active" >关于我们</a>
+                        </li>
+                        <li class="nav-item mr0">
+                            <span ></span>
+                            <a href="../contactus/index.html" >联系我们</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- connactus -->
+            <div class="title">
+                    <div class="line-left"></div>
+                    <div class="line-right"></div>
+                    <div class="eng">About Us</div>
+                    <div class="chs">关于我们</div>
+            </div>
+            <!-- 关于我们具体文字 -->
+            <div class="aboutus-text">
+                <p>镜 界 摄 影 2014 年 成 立 于 郑 州，是 郑 州 知 名 一 线 品 牌 旅 拍 摄 影 工 作。作 品 多 次 被 今 日 人 像 和人 像 摄 影  等 知 名 行 内 杂 志 推 荐，荣 誉 郑 州，多 年 来 致 力 于 坚 持 原 创 与 不 断 地 创 新，坚 信 实 力 铸 就 品 质，口 碑 坚 固 品 牌，我 们 的 拍 摄 方 式 更 像 是 一 天 旅 行，风 景 与 光 影，只 是 为 了 见 证 情 感，时 尚 会 消 逝，影 像 会 长 存，我 们 让 每 一 张 照 片 充 满 幸 福 的 温 度。</p>
+            </div>
+            <!-- 历史 -->
+            <div class="history">
+                <span class="year1">4</span>
+                <span class="time1">
+                    13000
+                    <span>小时</span>
+                </span>
+                <span class="picture1">
+                        1008
+                        <span>套</span>
+                </span>
+                <span class="year2">年/year</span>
+                <span class="time2">拍摄时间/time</span>
+                <span class="picture2">照片/picture</span>
+                <span class="line1"></span>
+                <span class="line2"></span>
+            </div>
+            <!-- 介绍 -->
+            <div class="introduce">
+                <div class="logo">
+                    <div class="logo1"></div>
+                    <div class="logo2"></div>
+                </div>
+                <div class="text1">与影随行</div>
+                <div class="text2">
+                    <p>我 们 摄 影 师 拍 的 是 情 感 和 性 格 ，抓 的 是 情 绪 ，因 为 每 个 人 都 是 独 立 的 个 体，人 本 身 不 是 僵 化 的，是 鲜 活 的 变 化 的，生 机 勃 勃 的 都 有 自 己 的 性 格 和 独 特 的 魅 力。而 我 们 要 为 你 留 下 的 是 人 生 中 属 于 自 己 的 那 闪 耀 的 每 一秒。 </p>
+                    <p>我 们 的 服 务 宗 旨 是 秉 承 顾 客 至 上 的 原 则 ，全 心 全 意 为 客 户 提 供 热 情 服 务 的 理 念。超 越 顾 客 期 望 值，只 有 这样 我 们 才 有 未 来。顾 客 第 一，真 诚，关 爱，敬 业，创 新，共 赢。</p>
+                    <p>一 次 美 丽 终 生 回 忆，选 择 镜 界 摄 影，不 再 平 凡。服 务 创 作 价 值，为 客 人 提 供 专 业，高 端，个 性 化 的 摄 影 服 务。   </p>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!-- 底部样式 -->
+    <div class="bottom">
+            <div class="bottom-c">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <div class="work">
+                    <p>郑州镜界摄影服务工作室</p>
+                    <a href="" class="wb"></a>
+                    <a href="" class="qq"></a>
+                    <a href="" class="wx"></a>
+                    <a href="" class="bd"></a>
+                </div>
+                <div class="text">
+                    <p>地址：郑州市郑东新区绿地中心6号楼</p>
+                    <p>服务热线：037-7981788</p>
+                    <p>邮编：456333</p>
+                </div>
+                <div class="text tel">
+                    <p>手机：18236988754</p>
+                    <p>邮箱：912754544@qq.com</p>
+                    <p>Q Q：912754544</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-c">
+                <p>Copyright ©2010 ls1001.com, All rights reserved. 镜界传媒艺术有限公司 豫ICP备11028596号</p>
+            </div>
+        </div>
+</body>
+</html>

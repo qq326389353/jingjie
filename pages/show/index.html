@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+</head>
+<style>
+    .tip{
+        position: relative;
+        width: 100%;
+        height: 559px;
+        background: url(img/banner.png) no-repeat center;            
+        background-size: cover;
+    }
+    .main{
+        width: 100%;
+        height: 1148px;
+        background-color: #161616;
+    }
+    .main-c{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .main .title{
+        position: relative;
+        width: 517px;
+        height: 160px;
+        margin: 0 auto;
+         }
+        .title .line-left{
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 130px;
+        height: 2px;
+        background-color: #850e0e;
+        }
+        .title .line-right{
+        position: absolute;
+        top: 120px;
+        right: 0;
+        width: 130px;
+        height: 2px;
+        background-color: #850e0e;
+        }
+        .title .eng{
+        position: absolute;
+        top: 110px;
+        left: 216px;
+        font-size: 24px;
+        color: #dd1717;
+        }
+        .title .chs{
+        position: absolute;
+        bottom: 0;
+        left: 230px;
+        font-size: 16px;
+        color: #8c8c8c;
+        }
+        .main .button{
+            width: 856px;
+            height: 33px;
+            /* background-color: blue; */
+            margin: 0 auto;
+            margin-top: 76px;
+        }
+        .main .button .button-item{
+            float: left;
+            width: 99px;
+            height: 31px;
+            border: 1px solid #454545;
+            margin-right: 12px;
+        }
+        .main .button .button-item a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+            line-height: 30px;
+            text-align: center;
+            color: #8c8c8c;
+        }
+        .main .button .button-item:hover a{
+            background-color: #dd1717;
+            color: #ffffff;
+        }
+        .main .button .button-item:hover{
+            border: 1px solid #dd1717;
+        }
+        .main .button .button-item.small{
+            width: 63px;
+        }
+        .main .button .button-item.mr0{
+            margin-right: 0;
+        }
+        .main .img{
+            width: 100%;
+            height: 568px;
+            margin-top: 70px;
+            /* background-color: blue; */
+        }
+        /* 图片展示 */
+        .main .img .img-item{
+            position: relative;
+            float: left;
+            width: 285px;
+            height: 176px;
+            /* background-color: red; */
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        .main .img .img-item.mrr0{
+            margin-right: 0;
+        }
+        .main .img .img-item.mrb0{
+            margin-bottom: 0;
+        }
+        .main .img .img-item .heimeng{
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color:rgba(4, 4, 5, 0.6)
+        }
+        .main .img .img-item .text{
+            display: none;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 253px;
+            height: 136px;
+            border: 1px solid #dd1717;
+        }
+        .main .img .img-item .text p{
+            color: #ffffff;
+            text-align: center;
+            font-size:14px;
+        }
+        .main .img .img-item .text .p1{
+            margin-top: 48px;
+            color: #dd1717;
+        }
+        .main .img .img-item .text .p2{
+            margin-top: 23px;
+            color: :rgba(255, 254, 254, 0.4)
+            font-size: 12px;
+        }
+        .main .img .img-item:hover .heimeng{
+            display: block;
+        }
+        .main .img .img-item:hover .text{
+            display: block;
+        }
+        /* 图片选择 */
+        .main .img .img-item.img1{
+            background: url(img/img1.png) no-repeat center;
+            background-size: cover;
+        }
+        .main .img .img-item.img2{
+            background: url(img/img2.png) no-repeat center;
+            background-size: cover;
+        }
+        .main .img .img-item.img3{
+            background: url(img/img3.png) no-repeat center;
+            background-size: cover;
+        }
+        .main .img .img-item.img4{
+            background: url(img/img4.png) no-repeat center;
+            background-size: cover;
+        }
+        .main .img .img-item.img5{
+            background: url(img/img5.png) no-repeat center;
+            background-size: cover;
+        }
+        .main .img .img-item.img6{
+            background: url(img/img6.png) no-repeat center;
+            background-size: cover;
+        }
+        .main .img .img-item.img7{
+            background: url(img/img7.png) no-repeat center;
+            background-size: cover;
+        }
+        .main .img .img-item.img8{
+            background: url(img/img8.png) no-repeat center;
+            background-size: cover;
+        }
+        .main .img .img-item.img9{
+            background: url(img/img9.png) no-repeat center;
+            background-size: cover;
+        }
+        .main .img .img-item.img10{
+            background: url(img/img10.png) no-repeat center;
+            background-size: cover;
+        }
+        .main .img .img-item.img11{
+            background: url(img/img11.png) no-repeat center;
+            background-size: cover;
+        }
+        .main .img .img-item.img12{
+            background: url(img/img12.png) no-repeat center;
+            background-size: cover;
+        }
+        /* 页码 */
+        .page{
+            width: 322px;
+            height: 22px;
+            margin: 0 auto;
+            margin-top: 78px;
+        }
+        .page .page-item{
+            float: left;
+            width: 22px;
+            height: 100%;
+            margin-right: 22px;
+            font-size: 14px;
+    
+        }
+        .page .page-item.mr10{
+            line-height: 22px;
+            text-align: center;
+            margin-right: 5px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .page .page-item a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 22px;
+        }
+        .page .page-item a:hover{
+            background-color: #dd1717;
+        }
+</style>
+<body>
+    <div class="tip">
+        <div class="top">
+            <div class="top-c">
+                <span class="logo"></span>
+                <span class="text"></span>
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <span class="one"></span>
+                        <a href="../../index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="active"></span>
+                        <a href="" class="active">样片大赛</a>
+                    </li>
+                    <li class="nav-item">
+                        <span></span>
+                        <a href="../favourable/index.html">当季优惠</a>
+                    </li>
+                    <li class="nav-item">
+                        <span ></span>
+                        <a href="../city/index.html" >旅拍城市</a>
+                    </li>
+                    <li class="nav-item ">
+                        <span  ></span>
+                        <a href="../aboutus/index.html"  >关于我们</a>
+                    </li>
+                    <li class="nav-item mr0">
+                        <span ></span>
+                        <a href="../contactus/index.html" >联系我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 主要内容 -->
+    <div class="main">
+        <div class="main-c">
+            <!-- 标题部分 -->
+            <div class="title">
+                <div class="line-left"></div>
+                <div class="line-right"></div>
+                <div class="eng">Product</div>
+                <div class="chs">作品目录</div>
+            </div>
+            <!-- 选择按钮 -->
+            <ul class="button">
+                <li class="button-item small">
+                    <a href="">全部</a>
+                </li>
+                <li class="button-item">
+                        <a href="">冷艳大气</a>
+                </li>
+                <li class="button-item">
+                        <a href="">高贵典雅</a>
+                </li>
+                <li class="button-item">
+                        <a href="">复古时尚</a>
+                </li>
+                <li class="button-item">
+                        <a href="">可爱活泼</a>
+                </li>
+                <li class="button-item">
+                        <a href="">个性独特</a>
+                </li>
+                <li class="button-item">
+                        <a href="">颓废忧伤</a>
+                </li>
+                <li class="button-item mr0">
+                        <a href="">甜蜜乖巧</a>
+                </li>
+            </ul>
+            <!-- 图片展示 -->
+            <ul class="img">
+                <li class="img-item img1">
+                    <div class="heimeng"></div>
+                    <div class="text">
+                        <p class="p1">Xiao Ru & Grady</p>
+                        <p class="p2">2018.6.25</p>
+                    </div>
+                </li>
+                <li class="img-item img2">
+                    <div class="heimeng"></div>
+                    <div class="text">
+                        <p class="p1">Xiao Ru & Grady</p>
+                        <p class="p2">2018.6.25</p>
+                    </div>
+                </li>
+                <li class="img-item img3">
+                    <div class="heimeng"></div>
+                    <div class="text">
+                        <p class="p1">Xiao Ru & Grady</p>
+                        <p class="p2">2018.6.25</p>
+                    </div>
+                </li>
+                <li class="img-item mrr0 img4"><div class="heimeng"></div>
+                    <div class="text">
+                        <p class="p1">Xiao Ru & Grady</p>
+                        <p class="p2">2018.6.25</p>
+                    </div></li>
+                <li class="img-item img5"><div class="heimeng"></div>
+                    <div class="text">
+                        <p class="p1">Xiao Ru & Grady</p>
+                        <p class="p2">2018.6.25</p>
+                    </div></li>
+                <li class="img-item img6"><div class="heimeng"></div>
+                    <div class="text">
+                        <p class="p1">Xiao Ru & Grady</p>
+                        <p class="p2">2018.6.25</p>
+                    </div></li>
+                <li class="img-item img7"><div class="heimeng"></div>
+                    <div class="text">
+                        <p class="p1">Xiao Ru & Grady</p>
+                        <p class="p2">2018.6.25</p>
+                    </div></li>
+                <li class="img-item mrr0 img8"><div class="heimeng"></div>
+                    <div class="text">
+                        <p class="p1">Xiao Ru & Grady</p>
+                        <p class="p2">2018.6.25</p>
+                    </div></li>
+                <li class="img-item mrb0 img9"><div class="heimeng"></div>
+                    <div class="text">
+                        <p class="p1">Xiao Ru & Grady</p>
+                        <p class="p2">2018.6.25</p>
+                    </div></li>
+                <li class="img-item mrb0 img10"><div class="heimeng"></div>
+                    <div class="text">
+                        <p class="p1">Xiao Ru & Grady</p>
+                        <p class="p2">2018.6.25</p>
+                    </div></li>
+                <li class="img-item mrb0 img11"><div class="heimeng"></div>
+                    <div class="text">
+                        <p class="p1">Xiao Ru & Grady</p>
+                        <p class="p2">2018.6.25</p>
+                    </div></li>
+                <li class="img-item mrr0 mrb0 img12"><div class="heimeng"></div>
+                    <div class="text">
+                        <p class="p1">Xiao Ru & Grady</p>
+                        <p class="p2">2018.6.25</p>
+                    </div></li>
+            </ul>
+            <!-- 页码 -->
+            <ul class="page">
+                <li class="page-item">
+                    <a href="">1</a>
+                </li>
+                <li class="page-item">
+                    <a href="">2</a>
+                </li>
+                <li class="page-item">
+                    <a href="">3</a>
+                </li>
+                <li class="page-item">
+                    <a href="">4</a>
+                </li>
+                <li class="page-item mr10">
+                    <a href="">5</a>
+                </li>
+                <li class="page-item mr10">...
+                </li>
+                <li class="page-item">
+                    <a href="">9</a>
+                </li>
+                <li class="page-item">
+                    <a href="">></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 底部样式 -->
+    <div class="bottom">
+            <div class="bottom-c">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <div class="work">
+                    <p>郑州镜界摄影服务工作室</p>
+                    <a href="" class="wb"></a>
+                    <a href="" class="qq"></a>
+                    <a href="" class="wx"></a>
+                    <a href="" class="bd"></a>
+                </div>
+                <div class="text">
+                    <p>地址：郑州市郑东新区绿地中心6号楼</p>
+                    <p>服务热线：037-7981788</p>
+                    <p>邮编：456333</p>
+                </div>
+                <div class="text tel">
+                    <p>手机：18236988754</p>
+                    <p>邮箱：912754544@qq.com</p>
+                    <p>Q Q：912754544</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-c">
+                <p>Copyright ©2010 ls1001.com, All rights reserved. 镜界传媒艺术有限公司 豫ICP备11028596号</p>
+            </div>
+    </div>
+    
+</body>
+</html>
